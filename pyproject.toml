@@ -1,0 +1,47 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "langchain-valkey"
+version = "0.1.0"
+description = "LangChain integration for Valkey vector store"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+repository = "https://github.com/yourusername/langchain-valkey"
+keywords = ["langchain", "valkey", "vector", "database", "llm"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+langchain-core = "^0.3.0"
+valkey = "^6.0.0"
+numpy = "^1.24.0"
+typing-extensions = "^4.0.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.0.0"
+pytest-asyncio = "^0.21.0"
+langchain-tests = "^0.3.0"
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.1.0"
+mypy = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.0.0"
+langchain-openai = "^0.3.28"
+langchain-aws = "^0.2.30"
+langchain-text-splitters = "^0.3.9"
+pytest-cov = "^6.2.1"
+
+[tool.pytest.ini_options]
+markers = []
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true
